@@ -12,5 +12,6 @@ module.exports = (req, res) => {
     f_lat: req.body.f_lat,
     s_lng: req.body.s_lng,
     s_lat: req.body.s_lat,
+    calendarId: req.body.calendarId,
   }).returning('*');
 };

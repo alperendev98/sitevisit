@@ -11,7 +11,8 @@ module.exports = (req, res) => {
         'salesperson.s_lat as s_lat',
         'salesperson.s_lng as s_lng',
         'salesperson.f_lat as f_lat',
-        'salesperson.f_lng as f_lng'
+        'salesperson.f_lng as f_lng',
+        'salesperson.calendarId as calendarId',
     ])
     .from('book').leftJoin('salesperson', 'book.group_key', '=', 'salesperson.sp_pk')
 }

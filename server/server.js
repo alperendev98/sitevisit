@@ -9,6 +9,7 @@ const cors = require('cors');
 const helpers = require('../helpers');
 const dev = process.env.NODE_ENV === 'development';
 const bookings = require('./components/bookings/bookings');
+const bookingdata = require('./components/bookingdata/bookingdata');
 const salesperson = require('./components/salesperson/salesperson');
 const closestperson = require('./components/closestperson/closestperson');
 const general = require('./components/general/general');
@@ -30,6 +31,7 @@ app.use('/api/v1/salesperson', salesperson)
 app.use('/api/v1/bookings', bookings)
 app.use('/api/v1/general', general)
 app.use('/api/v1/closestperson', closestperson)
+app.use('/api/v1/booking-data', bookingdata)
 app.all('*', (req, res, next) => {
     res.sendFile('index.html', {
         root: dev ? helpers.root('client/build') : helpers.root('dist')
