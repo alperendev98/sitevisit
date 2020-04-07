@@ -30,7 +30,7 @@
     "pg": "^7.3.0"
   },
   "devDependencies": {
-    "axios": "^0.17.0",
+    "axios": "^0.19.2",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.0",
     "babel-polyfill": "^6.26.0",
